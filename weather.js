@@ -44,7 +44,7 @@ const request =
       });
 } else {
   //Status Code Error
-  const statusCodeError = new Error("There was an error getting the message for '${readQuery}.(${http.STATUS_CODES[response.statusCode]})');
+  const statusCodeError = new Error("There was an error getting the message for '${readQuery}.(${http.STATUS_CODES[response.statusCode]})");
                                     printError(statusCodeError);
 }
      });//End Response
