@@ -17,9 +17,10 @@ const request =
         body += chunk;
       });
       response.on('end', () => {
-        console.log(body);
         //Parse data
+        const weather = JSON.parse(body);
         //Print data
+        printWeather(weather);
       });
      });//End Response
            
