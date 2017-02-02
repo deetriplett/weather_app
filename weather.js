@@ -1,12 +1,17 @@
+const http = require('http');
 const https = require('https');
 const api = request('./api.json');
 
 //Print Out temp Details
 function printWeather(weaather) {
-  const message = 'Current temperature in ${weather.location.city} is ${weather.current.observation.temp_f}F';
+  const message = 'Current temperature in ${weather.location.city} is ${weather.current_observation.temp_f}F';
   console.log(message);
 }
 //Print out error message
+function printError(error) {
+  console.log(error.message);
+}
+
 
 function get(query) {
 const request = 
